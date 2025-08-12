@@ -1,0 +1,119 @@
+.main {
+  width: 70vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 50px;
+}
+
+.section {
+  height: 100%;
+  width: 100%;
+}
+.Image_container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 80%;
+}
+.formSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginDiv {
+  height: 70%;
+  width: 80%;
+}
+.loginDiv h1 {
+  font-family: "Dancing Script";
+  text-align: center;
+  font-size: 2.2rem;
+}
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.feild {
+  display: block;
+  width: 75%;
+  min-height: 30px;
+  height: 40px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px grey;
+  margin-top: 10px;
+  padding: 10px;
+}
+.feild:nth-child(1) {
+  margin-top: 35px;
+}
+.loginBtn {
+  background-color: #808dfb;
+  color: white;
+  outline: none;
+  border: none;
+  margin-top: 25px;
+}
+.signUpBtn {
+  background-color: #5363f7;
+  color: white;
+  border-radius: 20px;
+}
+.forgetPassBtn {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+.barHolder {
+  margin-top: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bar {
+  height: 1px;
+  width: 70%;
+  background-color: grey;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.bar p {
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  padding: 0 5px 0 5px;
+}
+.navlink {
+  text-decoration: none;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 950px) {
+  .Image_container {
+    display: none;
+  }
+  .main {
+    width: 100vw;
+    justify-content: center;
+  }
+  .section {
+    width: 100%;
+  }
+  .feild {
+    width: 100%;
+  }
+}
