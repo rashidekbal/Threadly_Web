@@ -7,7 +7,9 @@ export default function RegisterPage() {
   const [IsLoggedIn, setisLoggedIn] = useState(false);
   const [isAgreed, setAgreed] = useState(true);
   useEffect(() => {
-    checkLoggedIn();
+    (async () => {
+      await checkLoggedIn();
+    })();
   }, []);
   return (
     <div className={style.main}>

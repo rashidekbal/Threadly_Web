@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 import {
   loginEmail,
   loginMobile,
@@ -7,7 +7,6 @@ import {
 import Response from "../constants/StandardResponse.js";
 import { getCookies, setCookieObject } from "../Utils/CookieManager.js";
 const data = createContext([]);
-const name = "rashid";
 async function login(type, userId, Password) {
   try {
     let response;
@@ -24,7 +23,7 @@ async function login(type, userId, Password) {
       username: response.username,
       token: response.token,
     });
-    location.replace("/home");
+    window.location.href = "/home";
     return null;
   } catch (error) {
     return new Response(error, "login failed");
@@ -32,6 +31,23 @@ async function login(type, userId, Password) {
 }
 
 export default function ContextProvider({ children }) {
-  return <data.Provider value={{ name, login }}>{children}</data.Provider>;
+  const [userPreloadData, setUserPreloadData] = useState(null);
+
+  async function fetchAndSetUserDataOnLoad() {
+    let cookies = await getCookies("userData");
+    if (cookies != null) {
+      sessionStorage.setItem("token", cookies.token);
+      setUserPreloadData(cookies);
+    }
+    return;
+  }
+  useEffect(() => {
+    (async () => {
+      await fetchAndSetUserDataOnLoad();
+    })();
+  }, []);
+  return (
+    <data.Provider value={{ login, userPreloadData }}>{children}</data.Provider>
+  );
 }
 export { data };

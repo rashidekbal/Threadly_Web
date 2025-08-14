@@ -24,7 +24,7 @@ img {
 .formSection {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 .loginDiv {
   height: 70%;
@@ -63,6 +63,7 @@ img {
   outline: none;
   border: none;
   margin-top: 25px;
+  padding: 0 20px;
 }
 .loginBtn:hover {
   background-color: #5363f7;
@@ -70,7 +71,9 @@ img {
 .signUpBtn {
   background-color: #5363f7;
   color: white;
-  border-radius: 20px;
+  border-radius: 8px;
+  height: 30px;
+  padding: 0 20px;
 }
 .forgetPassBtn {
   font-weight: bold;
@@ -104,6 +107,40 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.toastShow {
+  height: 40px;
+  width: 200px;
+  border: 1px solid red;
+  box-shadow: 0 0 5px red;
+  top: 10px;
+  position: fixed;
+  right: 10px;
+  padding: 5px;
+  transition: all;
+  transition-duration: 0.5s;
+  font-size: 12px;
+}
+.toastHide {
+  height: 40px;
+  width: 200px;
+  border: 1px solid red;
+  box-shadow: 0 0 5px red;
+  top: 10px;
+  position: fixed;
+  right: -220px;
+  padding: 5px;
+  transition: all;
+  transition-duration: 0.5s;
+  font-size: 12px;
+}
+
+.closeIcon {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 @media screen and (max-width: 950px) {
   .Image_container {
