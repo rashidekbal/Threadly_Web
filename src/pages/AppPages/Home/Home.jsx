@@ -12,7 +12,7 @@ import explore_InActive from "../../../assets/icons/explore_inactive.svg";
 import play_active from "../../../assets/icons/play_active.svg";
 import play_InActive from "../../../assets/icons/play_inactive.svg";
 import message_active from "../../../assets/icons/message_active.svg";
-import message_InActive from "../../../assets/icons/message_inactive.svg";
+import message_InActive from "../../../assets/icons/message_inActive.svg";
 import heart_active from "../../../assets/icons/heart_active_icon.svg";
 import heart_InActive from "../../../assets/icons/heart_inactive_Icon.svg";
 import addPost_icon from "../../../assets/icons/add_post_Icon.svg";
